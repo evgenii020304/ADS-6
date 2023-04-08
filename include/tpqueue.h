@@ -15,11 +15,11 @@ class TPQueue {
   TPQuene() : sizeM(size), first(0), last(0), count(0) {
     arr = new T[sizeM + 1];
   }
-  
+
   ~TPQuene() {
     delete[] arr;
   }
-  
+
   void push(const T& value) {
     assert(count < sizeM);
     if (count == 0) {
@@ -44,7 +44,7 @@ class TPQueue {
       last -= sizeM + 1;
     }
   }
-  
+
   const T& pop() {
     assert(count > 0);
     count--;
@@ -53,16 +53,16 @@ class TPQueue {
     }
     return arr[first++];
   }
-  
+
   const T& get() {
     assert(count > 0);
     return arr[first];
   }
-  
+
   bool isFull() const {
     return count == sizeM;
   }
-  
+
   bool isEmpty() const {
     return count == 0;
   }
