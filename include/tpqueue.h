@@ -12,11 +12,11 @@ class TPQueue {
   int count;
 
  public:
-  TPQuene():sizeM(size), first(0), last(0), count(0) {
+  TPQueue():sizeM(size), first(0), last(0), count(0) {
     arr = new T[sizeM + 1];
   }
 
-  ~TPQuene() {
+  ~TPQueue() {
     delete[] arr;
   }
 
